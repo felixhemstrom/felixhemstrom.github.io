@@ -1,0 +1,536 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+
+
+
+.nav {
+    position: fixed;
+    width: 100%;
+    text-align: right;
+    height: 100px;
+    line-height: 33px;
+     background-color: rgba(10,10,10,1);
+    z-index: 10;
+
+}
+
+#menu2{
+    position: absolute;
+    color: white;
+    display: block;
+    z-index: 12;
+    right: 1px;
+    top: -19px;
+    
+}
+
+
+#menuToggle
+{
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: 50px;
+  
+  z-index: 1;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #fff;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #fff;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 160px;
+  margin: 38px 0 0 0;
+  padding: 38px;
+  padding-top: 0px;
+  right: -100px;
+    
+  
+  background: white;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+    text-align: right;
+    top: auto;
+    color: black;
+  padding: 0px 1px 0px 9px;
+  font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: scale(1.0, 1.0);
+  opacity: 1;
+}
+
+
+li {
+  color: white;
+  text-align: center;
+    float: right;
+    list-style-type: none;
+  padding: 6px 12px;
+  text-decoration: none;
+    font-size: 30px;
+    margin-right: 40px;
+    line-height: 3;
+    z-index: 11;
+}
+
+@media only screen and (max-width: 800px){
+    
+    .menu{
+        text-align: center;
+        width: 100%;
+        display: ;
+        
+    }
+    .menu li {
+       
+        display: block;
+        position: relative;
+        top: 100px;
+        font-size: 30px;   
+    }
+    #menuToggle{
+        display: block;
+    }
+    #menu2{
+        display: none;
+    }
+}
+    
+
+
+
+
+
+
+li a1:hover{ color: #0ACC40; }
+li a2:hover { color: #2D8DFF;}
+li a3:hover{color: #C11313; }
+
+
+
+
+.background_img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background-image: url("prog.jpg");
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+}
+
+.logotext{
+    display: block;
+}
+
+#welcome-section{
+    
+    /* Hej, jag är Felix Hemström. UX-deigner och webbutvecklare. */
+
+display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-left: 200px;
+    position: absolute;
+    
+max-width: 90%;
+width: 900px;
+height: 80px;
+top: 357px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 72px;
+line-height: 84px;
+color: #FFFFFF;
+
+}
+@media only screen and  (max-width: 1650px){
+   
+}
+
+#iam{
+display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-left: 300px;
+    position: absolute;
+    
+max-width: 90%;
+width: 700px;
+height: 80px;
+top: 440px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 46px;
+line-height: 84px;
+
+color: orange;
+    z-index: 2;
+
+}
+@media only screen and  (max-width: 1650px){
+    #iam{
+        margin-left: auto;
+        top: 180px;
+    }
+ #welcome-section{
+        margin-left: auto;
+        top: 95px;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 800px){
+    #welcome-section{
+        
+        width: 80%;
+        top: 100px;
+        position: absolute;
+       
+        
+        font-size: 6vw;
+        text-align: center;
+        
+        
+        
+}
+    #iam{
+        width: 60%;
+        top: 150px;
+        position: absolute;
+        
+        
+        
+        
+        font-size: 4vw;
+        text-align: center;
+    }
+}
+
+
+
+.layer{
+      background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    
+}
+
+
+
+.litenlogo{
+    
+    
+position: fixed;
+    height: 88px;
+    width: auto;
+    top: 5px;
+    left: 50px;
+    z-index: 11;
+}
+@media only screen and (max-width: 800px){
+    .litenlogo{
+        
+         position: fixed;
+    left: 50%;
+    margin-left: -50px !important;  /* 50% of your logo width */
+    display: block; 
+        
+        
+    }
+    
+}
+
+
+
+
+.storlogo{
+height: 500px;
+
+    display: block;
+    right: 9%;
+    top: 25%;
+    position: absolute;
+}
+@media only screen and (max-width:1650px){
+    .storlogo{
+        display: block;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+    margin-left: -220px !important;  /* 50% of your logo width */
+    display: block; 
+        
+    }
+    #logotext{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        
+      
+    }
+}
+
+
+
+
+@media only screen and (max-width:800px){
+.storlogo{
+        display: block;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+    margin-left: -220px !important;  /* 50% of your logo width */
+    display: block; 
+    }
+}
+
+
+
+
+
+#card{
+    display: block;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+
+left: 0;
+right: 0;
+    
+    
+    
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    width: 85%;
+    height: 900px;
+
+    
+    top: 960px;
+    z-index: -1;
+    
+    background-color: #fff;
+    box-shadow: 3px 3px 10px 6px #000;
+    
+    
+}
+.ommigotext{
+    font-size: 60px;
+    margin-left: 90px;
+    margin-top: 60px;
+    
+}
+#card p{
+    margin-left: 50px;
+    margin-right: 40%;
+    letter-spacing: 1px;
+    
+    font-size: 24px;
+        
+        
+        
+}
+
+
+#card2{
+    top: 1800px;
+    width: 100%;
+    height: 1200px;
+    
+    
+    display: flex;
+    position: absolute;
+    background-color: #272728;
+    z-index: -2;
+    color: black;
+      
+}
+
+#card2 img{
+    height: 60%;
+
+    position: absolute;
+    display: block;
+    right: 10%;
+    top: 250px;
+    
+}
+
+#card2 p2{
+     position: absolute;
+    top: 300px;
+    font-size: 30px;
+    width: 50%;
+    left: 8%;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
